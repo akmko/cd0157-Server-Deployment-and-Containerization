@@ -49,7 +49,6 @@ def require_jwt(function):
         data = request.headers['Authorization']
         token = str.replace(str(data), 'Bearer ', '')
         try:
-            assert False
             jwt.decode(token, JWT_SECRET, algorithms=['HS256'])
         except: # pylint: disable=bare-except
             abort(401)
