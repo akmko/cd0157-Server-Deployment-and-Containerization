@@ -88,6 +88,7 @@ def decode_jwt():
     """
     Check user token and return non-secret data
     """
+    assert False
     if not 'Authorization' in request.headers:
         abort(401)
     data = request.headers['Authorization']
